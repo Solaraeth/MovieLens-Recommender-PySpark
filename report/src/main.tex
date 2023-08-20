@@ -1,0 +1,92 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{chronology}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\graphicspath{images}
+\usepackage[style=apa]{biblatex}
+\addbibresource{references.bib}
+\usepackage{moreverb}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=40mm,
+ right=25mm,
+ top=15mm,
+ bottom=25mm
+ }
+
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+ \providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  linewidth=\linewidth,
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{magenta},
+  rulecolor=\color{gray},
+  breaklines=true,
+  captionpos=b,
+  tabsize=3
+}
+
+\title{Making a Movie Recommendation System: An Introductory Exploration of Machine Learning Techniques}
+\author{Byron Pascal Wandera and Stewart Charles Fisher II}
+\date{2023}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+\maketitle
+
+%TC:ignore
+
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+\pagebreak
+
+%TC:endignore
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{tex/introduction.tex}
+
+\pagebreak
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\appendix
+%TC:ignore
+
+%TC:endignore
+\end{document}
